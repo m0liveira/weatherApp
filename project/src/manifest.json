@@ -1,6 +1,9 @@
 {
   "name": "WeatherExt",
-  "version": 1.0,
-  "description": "Weather extension, watch the weather here!",
-  "manifest_version": 2
+  "version": "1.0",
+  "description": "Weather extension, watch the weather here",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html"
+  }
 }
