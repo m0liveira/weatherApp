@@ -1,6 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
+  /* font */
   --inter: "Inter", sans-serif;
+
+  /* page Backgrounds */
+  --pg-Primary: #fefefe;
+  --pg-Secondary: #f7fafb;
+
+  /* other backgrounds */
+  --bg-Light: #fefefe;
+  --bg-Semi-Medium: #edf1f6;
+  --bg-Medium: #b5bec9;
+  --bg-Semi-Dark: #6b7d94;
+  --bg-Dark: #586271;
+
+  /* text colors */
+  --txt-Light: #b5bec9;
+  --txt-Semi-Medium: #abb5c2;
+  --txt-Medium: #a6b1bf;
+  --txt-Dark: #6b7d94;
+
+  /* shadow color */
+  --cardShadow: -2px 5px 5px 0px #edf1f6;
+  --searchShadow: 0px 3px 5px 0px #edf1f6;
+
+  /* font weight */
+  --fw-regular: 400;
+  --fw-Medium: 500;
+  --fw-Semi-Bold: 600;
+}
+
+[data-theme="dark"] {
+  /* page Backgrounds */
+  --pg-Primary: #4a5568;
+  --pg-Secondary: #3a4556;
+
+  /* other backgrounds */
+  --bg-Light: #4a5568;
+  --bg-Semi-Medium: #2d3848;
+  --bg-Medium: #b5bec9;
+  --bg-Semi-Dark: #f0f2f4;
+  --bg-Dark: #f9fafb;
+
+  /* text colors */
+  --txt-Light: #b5bec9;
+  --txt-Semi-Medium: #c4cbd4;
+  --txt-Medium: #d3d8df;
+  --txt-Dark: #f0f2f4;
+
+  /* shadow color */
+  --cardShadow: -2px 5px 5px 0px #2d3848;
+  --searchShadow: 0px 3px 5px 0px #2d3848;
 }
 
 /* reset */
@@ -14,12 +64,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--inter);
+  font-weight: var(--fw-Medium);
   outline: none;
 }
 
-section {
+body, section {
+  background: var(--pg-Secondary);
   width: 400px;
-  height: 500px;
+  height: 600px;
 }
 
 .hide {
