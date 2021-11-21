@@ -74,6 +74,10 @@ body, section {
   height: 600px;
 }
 
+body{
+  background: grey;
+}
+
 .hide {
   display: none !important;
 }

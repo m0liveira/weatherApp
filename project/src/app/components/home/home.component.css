@@ -51,4 +51,73 @@
   transform: rotate(90deg);
 }
 
+.bottom-container .cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 75%;
+  height: 75%;
+}
+
+.bottom-container .cards .card {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 25%;
+  background: var(--bg-Light);
+  box-shadow: var(--cardShadow);
+  border-radius: 5px;
+  padding-left: 5%;
+}
+
+.bottom-container .cards .card p {
+  color: var(--txt-Medium);
+  font-size: 1.125rem;
+  width: 45%;
+}
+
+.bottom-container .cards .card p + p {
+  color: var(--txt-Dark);
+  font-size: 1.375rem;
+  font-weight: var(--fw-Semi-Bold);
+  width: 25%;
+}
+
+.bottom-container .cards .card .info-container {
+  width: 30%;
+  height: 80%;
+}
+
+.bottom-container .cards .card .info-container .top-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+  height: 35%;
+}
+
+.bottom-container .cards .card .info-container .top-area p {
+  color: var(--txt-Light);
+  font-size: 0.75rem;
+  width: 70%;
+}
+
+.bottom-container .cards .card .info-container .top-area svg {
+  fill: var(--bg-Medium);
+  width: 30%;
+  height: 85%;
+}
+
+.bottom-container .cards .card .info-container .bottom-area {
+  width: 90%;
+  height: 65%;
+}
+
+.bottom-container .cards .card .info-container .bottom-area svg {
+  fill: var(--bg-Medium);
+  width: 100%;
+  height: 100%;
+}
 /*  */
