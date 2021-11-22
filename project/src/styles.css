@@ -72,6 +72,7 @@ body, section {
   background: var(--pg-Secondary);
   width: 400px;
   height: 600px;
+  transition: background 200ms ease-in-out;
 }
 
 body{

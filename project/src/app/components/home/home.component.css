@@ -1,6 +1,23 @@
+p {
+  cursor: default;
+}
+
 .img-container {
+  position: relative;
   width: 100%;
   height: 35%;
+}
+
+.img-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  z-index: 1;
 }
 
 .img-container img {
@@ -8,6 +25,42 @@
   border-radius: 0px 0px 5px 5px;
   width: 100%;
   height: 100%;
+}
+
+.img-container p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 4.375rem;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.img-container .themeToggle {
+  position: absolute;
+  left: 85%;
+  top: 7.5%;
+  background: var(--bg-Light);
+  border: 2px solid var(--bg-Semi-Medium);
+  border-radius: 100px;
+  width: 10%;
+  height: 10%;
+  z-index: 2;
+  transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+.img-container .themeToggle #button {
+  background: var(--bg-Dark);
+  border-radius: 50%;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  transition: background 200ms ease-in-out, transform 350ms ease-in-out;
 }
 
 .bottom-container {
@@ -34,11 +87,13 @@
   padding: 0 12% 0 3%;
   width: 100%;
   height: 100%;
+  transition: background 200ms ease-in-out, color 200ms ease-in-out;
 }
 
 .bottom-container .search-box input::placeholder {
   color: var(--txt-Semi-Medium);
   font-size: 1.125rem;
+  transition: color 200ms ease-in-out;
 }
 
 .bottom-container .search-box a {
@@ -47,7 +102,6 @@
   top: 15%;
   width: 10%;
   height: 70%;
-  border: 1px solid red;
 }
 
 .bottom-container .search-box a svg {
@@ -55,6 +109,7 @@
   width: 100%;
   height: 100%;
   transform: rotate(90deg);
+  transition: fill 200ms ease-in-out;
 }
 
 .bottom-container .cards {
@@ -75,12 +130,14 @@
   box-shadow: var(--cardShadow);
   border-radius: 5px;
   padding-left: 5%;
+  transition: background 200ms ease-in-out, box-shadow 200ms ease-in-out;
 }
 
 .bottom-container .cards .card p {
   color: var(--txt-Medium);
   font-size: 1.125rem;
   width: 45%;
+  transition: color 200ms ease-in-out;
 }
 
 .bottom-container .cards .card p + p {
@@ -88,6 +145,7 @@
   font-size: 1.375rem;
   font-weight: var(--fw-Semi-Bold);
   width: 25%;
+  transition: color 200ms ease-in-out;
 }
 
 .bottom-container .cards .card .info-container {
@@ -108,12 +166,14 @@
   color: var(--txt-Light);
   font-size: 0.75rem;
   width: 70%;
+  transition: color 200ms ease-in-out;
 }
 
 .bottom-container .cards .card .info-container .top-area svg {
   fill: var(--bg-Medium);
   width: 30%;
   height: 85%;
+  transition: fill 200ms ease-in-out;
 }
 
 .bottom-container .cards .card .info-container .bottom-area {
@@ -125,5 +185,10 @@
   fill: var(--bg-Medium);
   width: 100%;
   height: 100%;
+  transition: fill 200ms ease-in-out;
 }
-/*  */
+
+/* animations */
+.darkTHeme {
+  transform: translateX(100%);
+}
