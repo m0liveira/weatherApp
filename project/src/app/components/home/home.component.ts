@@ -50,13 +50,9 @@ export class HomeComponent implements OnInit {
   // change theme functions
   changeTheme(): void {
     if (this.isDark) {
-      setTimeout(() => {
-        document.body.setAttribute("data-theme", "dark");
-      }, 150);
+      document.body.setAttribute("data-theme", "dark");
     } else {
-      setTimeout(() => {
-        document.body.removeAttribute("data-theme");
-      }, 150);
+      document.body.removeAttribute("data-theme");
     }
   }
 
@@ -74,11 +70,15 @@ export class HomeComponent implements OnInit {
     if (!this.isDark) {
       this.isDark = true;
       themeToggler.classList.add("darkTHeme");
-      this.changeTheme();
+      setTimeout(() => {
+        this.changeTheme();
+      }, 150);
     } else {
       this.isDark = false;
       themeToggler.classList.remove("darkTHeme");
-      this.changeTheme();
+      setTimeout(() => {
+        this.changeTheme();
+      }, 150);
     }
     this.updateStorage();
   }
