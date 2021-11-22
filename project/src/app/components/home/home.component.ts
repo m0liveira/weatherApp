@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   // variables
   isDark: boolean;
+  time: string = "00:00";
 
   constructor() { }
 
@@ -36,7 +37,6 @@ export class HomeComponent implements OnInit {
 
   // get the clock function
   getCurrentTime(): void {
-    var time: any = document.getElementById("time");
     let date: Date = new Date();
     let hours: number | string = date.getHours();
     let minutes: number | string = date.getMinutes();
@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
     hours <= 9 && hours >= 0 ? hours = "0" + hours : hours
     minutes <= 9 && minutes >= 0 ? minutes = "0" + minutes : minutes;
 
-    time.innerHTML = hours + ":" + minutes;
+    this.time = hours + ":" + minutes;
   }
 
   // change theme functions

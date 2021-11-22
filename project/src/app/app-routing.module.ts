@@ -7,7 +7,7 @@ import { WeatherPageComponent } from './components/weather-page/weather-page.com
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/notFound',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
   { path: 'home', component: HomeComponent },
