@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   // get the clock function
   getCurrentTime(): void {
-    var time: any = document.getElementById("time")
+    var time: any = document.getElementById("time");
     let date: Date = new Date();
     let hours: number | string = date.getHours();
     let minutes: number | string = date.getMinutes();
