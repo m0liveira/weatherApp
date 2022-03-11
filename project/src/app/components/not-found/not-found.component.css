@@ -59,8 +59,8 @@
   color: var(--txt-Dark);
   font-size: 1.125rem;
   font-weight: var(--fw-Semi-Bold);
-  height: 10%;
-  width: 100%;
+  height: auto;
+  width: 90%;
   overflow: hidden;
   transition: color 200ms ease-in-out;
 }
