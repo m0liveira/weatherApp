@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherService } from '../../../services/weather.service';
 
 @Component({
   selector: 'app-weather-page',
@@ -9,7 +10,7 @@ export class WeatherPageComponent implements OnInit {
   // variables
   isDark: boolean;
 
-  constructor() { }
+  constructor(private weatherService: WeatherService) { }
 
   ngOnInit(): void {
     this.verifyStorage();
@@ -64,6 +65,15 @@ export class WeatherPageComponent implements OnInit {
       }, 150);
     }
     this.updateStorage();
+  }
+
+  getWeather() {
+    // this.weatherService.getWeather(location).subscribe((data) => {
+    //   this.userService.mail = data.body[0].email;
+    //   this.userService.username = data.body[0].username;
+    // }, (err) => {
+    //   return err;
+    // });
   }
 
   changeDay(today: HTMLElement, tomorrow: HTMLElement) {
