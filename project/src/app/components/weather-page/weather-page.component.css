@@ -1,31 +1,153 @@
-.theme-container {
+section {
   position: relative;
-  width: 100%;
-  height: 10%;
+  overflow: hidden;
 }
 
-.theme-container .themeToggle {
+.background {
   position: absolute;
-  left: 85%;
-  top: 25%;
-  background: var(--bg-Light);
-  border: 2px solid var(--bg-Semi-Medium);
-  border-radius: 100px;
-  width: 10%;
-  height: 35%;
-  transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-.theme-container .themeToggle #button {
-  background: var(--bg-Dark);
-  border-radius: 50%;
+.background img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#bgSVG {
+  position: absolute;
+  top: -2%;
+  width: 100%;
+  height: 105%;
+  z-index: 0;
+}
+
+#bgSVG path {
+  fill: var(--pg-Primary);
+  transition: all 200ms ease-in-out;
+}
+
+.theme-container {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 2;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.container .top {
+  border: 1px solid lightblue;
+  width: 100%;
+  height: 35%;
+}
+
+.container .bottom {
+  width: 100%;
+  height: 65%;
+}
+
+.container .bottom .search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 30%;
+}
+
+.container .bottom .search a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-Light);
+  box-shadow: var(--searchShadow);
+  border-radius: 100px;
+  width: 17%;
+  height: 55%;
+  margin-right: 10%;
+  transition: background 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.container .bottom .search a svg {
+  fill: var(--bg-Dark);
+  width: 50%;
+  height: 50%;
+  transform: rotate(90deg);
+  transition: fill 200ms ease-in-out;
+}
+
+.container .bottom .weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  border: 1px solid red;
+}
+
+.container .bottom .weather p {
+  color: var(--txt-Dark);
+  font-weight: var(--fw-Semi-Bold);
+  font-size: 1.875rem;
+  text-align: center;
+  width: 100%;
+  transition: color 200ms ease-in-out;
+}
+
+.container .bottom .weather .day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+}
+
+.container .bottom .weather .day a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--txt-Light);
+  border-bottom: 1px solid var(--bg-Medium);
+  font-size: 1.125rem;
+  font-weight: var(--fw-Medium);
   width: 50%;
   height: 100%;
   cursor: pointer;
-  transition: background 200ms ease-in-out, transform 350ms ease-in-out;
+  transition: color 200ms ease-in-out, border-bottom-color 200ms ease-in-out;
 }
 
+.container .bottom .weather .week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+}
 
+.container .bottom .weather .week .info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+}
+
+/* independent classes */
+.active {
+  color: var(--txt-Medium) !important;
+  border-color: var(--bg-Semi-Dark) !important;
+}
 
 /* animations */
 .darkTHeme {

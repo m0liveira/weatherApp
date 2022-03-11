@@ -29,8 +29,6 @@ p {
 
 .img-container p {
   position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,23 +42,9 @@ p {
 .img-container .themeToggle {
   position: absolute;
   left: 85%;
-  top: 7.5%;
-  background: var(--bg-Light);
-  border: 2px solid var(--bg-Semi-Medium);
-  border-radius: 100px;
-  width: 10%;
+  top: 9.5%;
   height: 10%;
   z-index: 2;
-  transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
-}
-
-.img-container .themeToggle #button {
-  background: var(--bg-Dark);
-  border-radius: 50%;
-  width: 50%;
-  height: 100%;
-  cursor: pointer;
-  transition: background 200ms ease-in-out, transform 350ms ease-in-out;
 }
 
 .bottom-container {

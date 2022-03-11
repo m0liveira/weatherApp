@@ -75,8 +75,35 @@ body, section {
   transition: background 200ms ease-in-out;
 }
 
-body{
+body {
   background: grey;
+}
+
+.theme-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+
+.themeToggle {
+  background: var(--bg-Light);
+  border: 2px solid var(--bg-Semi-Medium);
+  border-radius: 100px;
+  width: 10%;
+  height: 35%;
+  margin-right: 5%;
+  transition: background 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+.themeToggle #button {
+  background: var(--bg-Dark);
+  border-radius: 50%;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  transition: background 200ms ease-in-out, transform 350ms ease-in-out;
 }
 
 .hide {

@@ -65,4 +65,9 @@ export class WeatherPageComponent implements OnInit {
     }
     this.updateStorage();
   }
+
+  changeDay(today: HTMLElement, tomorrow: HTMLElement) {
+    today.classList.toggle('active');
+    tomorrow.classList.toggle('active');
+  }
 }
